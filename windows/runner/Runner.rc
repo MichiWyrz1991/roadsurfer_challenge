@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "de.hill.roadsufer" "\0"
-            VALUE "FileDescription", "foo" "\0"
+            VALUE "CompanyName", "de.hill" "\0"
+            VALUE "FileDescription", "roadsurfer_challenge" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "foo" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 de.hill.roadsufer. All rights reserved." "\0"
-            VALUE "OriginalFilename", "foo.exe" "\0"
-            VALUE "ProductName", "foo" "\0"
+            VALUE "InternalName", "roadsurfer_challenge" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 de.hill. All rights reserved." "\0"
+            VALUE "OriginalFilename", "roadsurfer_challenge.exe" "\0"
+            VALUE "ProductName", "roadsurfer_challenge" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

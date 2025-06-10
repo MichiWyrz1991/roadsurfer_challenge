@@ -1,6 +1,6 @@
 # roadsurfer_challenge
 
-App for Roadsurfer Flutter Coding Challenge
+A new Flutter project.
 
 ## Getting Started
 

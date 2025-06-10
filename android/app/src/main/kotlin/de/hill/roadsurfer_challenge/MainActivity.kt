@@ -1,4 +1,4 @@
-package de.hill.roadsufer.foo
+package de.hill.roadsurfer_challenge
 
 import io.flutter.embedding.android.FlutterActivity
 
