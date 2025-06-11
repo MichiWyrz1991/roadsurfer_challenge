@@ -1,3 +1,4 @@
+// Todo: Generate with freeze or json_serialize
 class Campsite {
   final String id;
   final String label;
@@ -6,7 +7,6 @@ class Campsite {
   final bool isCloseToWater;
   final bool isCampFireAllowed;
   final List<String> hostLanguages;
-  final List<String> suitableFor;
   final DateTime createdAt;
   final GeoLocation geoLocation;
 
@@ -18,7 +18,6 @@ class Campsite {
     required this.isCloseToWater,
     required this.isCampFireAllowed,
     required this.hostLanguages,
-    required this.suitableFor,
     required this.createdAt,
     required this.geoLocation,
   });
@@ -32,7 +31,6 @@ class Campsite {
       isCloseToWater: json['isCloseToWater'] ?? false,
       isCampFireAllowed: json['isCampFireAllowed'] ?? false,
       hostLanguages: List<String>.from(json['hostLanguages'] ?? []),
-      suitableFor: List<String>.from(json['suitableFor'] ?? []),
       createdAt: DateTime.parse(json['createdAt'] as String),
       geoLocation: GeoLocation.fromJson(
         json['geoLocation'] as Map<String, dynamic>,
@@ -49,7 +47,6 @@ class Campsite {
       'isCloseToWater': isCloseToWater,
       'isCampFireAllowed': isCampFireAllowed,
       'hostLanguages': hostLanguages,
-      'suitableFor': suitableFor,
       'createdAt': createdAt.toIso8601String(),
       'geoLocation': geoLocation.toJson(),
     };
@@ -57,19 +54,19 @@ class Campsite {
 }
 
 class GeoLocation {
-  final double lat;
-  final double long;
+  final double latitude;
+  final double longitude;
 
-  GeoLocation({required this.lat, required this.long});
+  GeoLocation({required this.latitude, required this.longitude});
 
   factory GeoLocation.fromJson(Map<String, dynamic> json) {
     return GeoLocation(
-      lat: (json['lat'] as num).toDouble(),
-      long: (json['long'] as num).toDouble(),
+      latitude: (json['lat'] as num).toDouble(),
+      longitude: (json['long'] as num).toDouble(),
     );
   }
 
   Map<String, dynamic> toJson() {
-    return {'lat': lat, 'long': long};
+    return {'lat': latitude, 'long': longitude};
   }
 }

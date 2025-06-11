@@ -14,7 +14,10 @@ class ApiCampsiteRepository implements CampsiteRepository {
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       final List data = jsonDecode(response.body);
-      return data.map((e) => Campsite.fromJson(e)).toList();
+      final List<Campsite> campsites =
+          data.map((e) => Campsite.fromJson(e)).toList();
+      campsites.sort((a, b) => a.label.compareTo(b.label));
+      return campsites;
     } else {
       throw Exception('Failed to load campsites');
     }

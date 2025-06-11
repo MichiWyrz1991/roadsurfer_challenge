@@ -24,9 +24,8 @@ void main() {
           isCloseToWater: true,
           isCampFireAllowed: true,
           hostLanguages: [],
-          suitableFor: [],
           createdAt: DateTime.now(),
-          geoLocation: GeoLocation(lat: 10.0, long: 10.0),
+          geoLocation: GeoLocation(latitude: 10.0, longitude: 10.0),
         ),
       ],
     );

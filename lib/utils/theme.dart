@@ -4,10 +4,10 @@ import 'package:roadsurfer_challenge/utils/color.dart';
 final ThemeData roadsurferTheme = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: BrandColors.light,
-  primaryColor: BrandColors.rentPrimary,
+  primaryColor: BrandColors.campingPrimary,
   colorScheme: ColorScheme(
     brightness: Brightness.light,
-    primary: BrandColors.rentPrimary,
+    primary: BrandColors.campingPrimary,
     onPrimary: BrandColors.white,
     secondary: BrandColors.secondaryText,
     onSecondary: BrandColors.black,
@@ -20,7 +20,7 @@ final ThemeData roadsurferTheme = ThemeData(
     elevation: 3,
     centerTitle: true,
     foregroundColor: BrandColors.white,
-    backgroundColor: BrandColors.rentPrimary,
+    backgroundColor: BrandColors.campingPrimary,
     titleTextStyle: TextStyle(
       fontSize: 24,
       fontWeight: FontWeight.bold,
@@ -45,17 +45,22 @@ final ThemeData roadsurferTheme = ThemeData(
       fontWeight: FontWeight.bold,
       color: BrandColors.primaryText,
     ),
+    labelSmall: TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.normal,
+      color: BrandColors.primaryText,
+    ),
   ),
   buttonTheme: ButtonThemeData(
-    buttonColor: BrandColors.rentPrimary,
+    buttonColor: BrandColors.campingPrimary,
     textTheme: ButtonTextTheme.primary,
   ),
   floatingActionButtonTheme: FloatingActionButtonThemeData(
-    backgroundColor: BrandColors.rentPrimary,
+    backgroundColor: BrandColors.campingPrimary,
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      backgroundColor: BrandColors.rentPrimary,
+      backgroundColor: BrandColors.campingPrimary,
       foregroundColor: BrandColors.black,
       textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
