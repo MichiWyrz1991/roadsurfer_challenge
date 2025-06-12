@@ -1,16 +1,28 @@
-# roadsurfer_challenge
+# 🚐 Roadsurfer Coding Challenge – Campsite Finder 🚐
 
-A new Flutter project.
+A Flutter web app for browsing, filtering, and displaying individual campsites – developed as a coding challenge, inspired by Roadsurfer Spots.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **List of all campsites** (sorted alphabetically)
+- **Filterable** by:
+- Campfires allowed
+- Proximity to water
+- (Extendable by language, price, country, etc.)
+- **Map view**
+- **Detailed view of campsite**
+- **State management with Riverpod**
+- **Responsive UI** (split-screen view on larger screens)
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Live Demo
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+👉 [Click here for the Web App](https://api.mein-bankerl.de/roadsurfer/web/index.html)
+
+---
+
+## Data Source
+
+The data is loaded from the following mock API:
+https://62ed0389a785760e67622eb2.mockapi.io/spots/v1/campsites

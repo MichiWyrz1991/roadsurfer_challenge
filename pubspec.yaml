@@ -1,5 +1,5 @@
 name: roadsurfer_challenge
-description: "App for Roadsufer Flutter Coding Challenge"
+description: "A Flutter web app for browsing, filtering, and displaying individual campsites – developed as a coding challenge, inspired by Roadsurfer Spots."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
