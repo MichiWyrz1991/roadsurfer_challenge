@@ -25,7 +25,11 @@ class CampsiteListItem extends StatelessWidget {
       ),
       child: ListTile(
         // Todo: use cached_network_image
-        leading: Image.network(campsite.photo, height: 160, width: 90),
+        leading: Image.network(
+          campsite.photo.replaceAll("http://", "https://"),
+          height: 160,
+          width: 90,
+        ),
         title: Text(
           campsite.label,
           style: Theme.of(context).textTheme.labelLarge,

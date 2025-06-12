@@ -21,7 +21,10 @@ class DetailsPage extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 16 / 9,
-            child: Image.network(campsite.photo, fit: BoxFit.cover),
+            child: Image.network(
+              campsite.photo.replaceAll("http://", "https://"),
+              fit: BoxFit.cover,
+            ),
           ),
           const SizedBox(height: 16),
           Text(campsite.label, style: Theme.of(context).textTheme.labelLarge),
