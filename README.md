@@ -5,10 +5,7 @@ A Flutter web app for browsing, filtering, and displaying individual campsites â
 ## Features
 
 - **List of all campsites** (sorted alphabetically)
-- **Filterable** by:
-- Campfires allowed
-- Proximity to water
-- (Extendable by language, price, country, etc.)
+- **Filter** (campfires allowed, near to water) -> Extendable by language, price, country, etc.
 - **Map view**
 - **Detailed view of campsite**
 - **State management with Riverpod**
