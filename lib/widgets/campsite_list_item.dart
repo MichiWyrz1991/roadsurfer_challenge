@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:roadsurfer_challenge/model/campsite.dart';
 import 'package:roadsurfer_challenge/utils/color.dart';
 import 'package:roadsurfer_challenge/utils/price_utils.dart';
@@ -11,6 +12,8 @@ class CampsiteListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
+
     return Card(
       // Todo: put the styling into the theme
       elevation: 3,
@@ -31,9 +34,18 @@ class CampsiteListItem extends StatelessWidget {
           children: [
             if (campsite.isCloseToWater)
               Tooltip(
-                message: "Campsite is close to water",
+                message: loc.campsite_close_to_water,
                 child: Icon(
                   Icons.water_outlined,
+                  size: 24,
+                  color: BrandColors.campingPrimary,
+                ),
+              ),
+            if (campsite.isCampFireAllowed)
+              Tooltip(
+                message: loc.campsite_fire_allowed,
+                child: Icon(
+                  Icons.local_fire_department,
                   size: 24,
                   color: BrandColors.campingPrimary,
                 ),
@@ -52,18 +64,18 @@ class CampsiteListItem extends StatelessWidget {
               children: [
                 if (campsite.hostLanguages.contains("de"))
                   Tooltip(
-                    message: "On this campsite you can speek in German",
+                    message: loc.campsite_languages_tooltip_de,
                     child: Padding(
                       padding: const EdgeInsets.all(2),
-                      child: Image.asset("countries/de.png", height: 16),
+                      child: Image.asset("assets/countries/de.png", height: 16),
                     ),
                   ),
                 if (campsite.hostLanguages.contains("en"))
                   Tooltip(
-                    message: "On this campsite you can speek in English",
+                    message: loc.campsite_languages_tooltip_en,
                     child: Padding(
                       padding: const EdgeInsets.all(2),
-                      child: Image.asset("countries/en.png", height: 16),
+                      child: Image.asset("assets/countries/en.png", height: 16),
                     ),
                   ),
               ],
@@ -76,7 +88,7 @@ class CampsiteListItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.baseline,
               children: [
                 Text(
-                  "Preis je Nacht",
+                  loc.campsite_price_per_night,
                   style: Theme.of(context).textTheme.labelSmall,
                 ),
                 const SizedBox(width: 8),

@@ -1,5 +1,5 @@
 import 'package:roadsurfer_challenge/model/campsite.dart';
 
-abstract class CampsiteRepository {
+abstract class CampsiteApi {
   Future<List<Campsite>> fetchCampsites();
 }

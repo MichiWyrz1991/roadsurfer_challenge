@@ -12,8 +12,13 @@ class CampsiteMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var center = LatLng(51.0, 10.0);
+    if (campsites.length == 1) {
+      center = campsites.first.latLng;
+    }
+
     return FlutterMap(
-      options: MapOptions(center: LatLng(51.0, 10.0), zoom: 6),
+      options: MapOptions(initialCenter: center, initialZoom: 6),
       children: [
         TileLayer(
           urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',

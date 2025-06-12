@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:roadsurfer_challenge/api/abstract_api.dart';
 import 'package:roadsurfer_challenge/model/campsite.dart';
-import 'package:roadsurfer_challenge/repository/abstract_repository.dart';
 
-class ApiCampsiteRepository implements CampsiteRepository {
+class CampsiteApiImpl implements CampsiteApi {
   final String _baseUrl = 'https://62ed0389a785760e67622eb2.mockapi.io';
   final String _path = '/spots/v1/campsites';
 

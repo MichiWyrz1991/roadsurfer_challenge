@@ -1,4 +1,14 @@
 {
   "@@locale": "en",
-  "login": "Login"
+  "bottom_bar_campsites": "Campsites",
+  "bottom_bar_map": "Map",
+  "campsite_page_title": "Campsite",
+  "campsite_close_to_water": "Located near water",
+  "campsite_fire_allowed": "Fire allowed",
+  "campsite_languages_title": "Available languages",
+  "campsite_languages_tooltip_de": "Provider speaks German",
+  "campsite_languages_tooltip_en": "Provider speaks English",
+  "campsite_price_per_night": "Price per night",
+  "campsite_cta_book_now": "Book now",
+  "filter_title": "Filter"
 }
