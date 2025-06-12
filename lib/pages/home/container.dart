@@ -14,11 +14,11 @@ class HomeContainer extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final showSplitScreen = MediaQuery.of(context).size.width > 800;
-    final data = ref.watch(campsiteDataProvider.notifier);
+    final state = ref.watch(campsiteStateProvider.notifier);
 
     final list = CampsitesList(campsites: campsites);
     final map = CampsiteMap(campsites: campsites);
-    Widget content = data.getBottomBarIndex() == 0 ? list : map;
+    Widget content = state.getBottomBarIndex() == 0 ? list : map;
 
     if (showSplitScreen) {
       content = Row(

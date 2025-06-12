@@ -13,7 +13,7 @@ class CampsitesList extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final showSplitScreen = MediaQuery.of(context).size.width > 800;
-    final data = ref.read(campsiteDataProvider.notifier);
+    final state = ref.read(campsiteStateProvider.notifier);
 
     return ListView.builder(
       padding: const EdgeInsets.symmetric(vertical: 8),
@@ -23,7 +23,7 @@ class CampsitesList extends ConsumerWidget {
           campsite: campsites[i],
           onTap: () {
             if (showSplitScreen) {
-              data.updateCampsite(campsites[i]);
+              state.updateCampsite(campsites[i]);
               Scaffold.of(context).openEndDrawer();
             } else {
               Navigator.of(context).push(

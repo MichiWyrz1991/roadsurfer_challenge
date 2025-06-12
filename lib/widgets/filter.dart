@@ -10,7 +10,7 @@ class Filter extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final loc = AppLocalizations.of(context)!;
-    var filter = ref.read(campsiteDataProvider.notifier);
+    var state = ref.read(campsiteStateProvider.notifier);
 
     return Container(
       decoration: BoxDecoration(color: BrandColors.white),
@@ -23,9 +23,9 @@ class Filter extends ConsumerWidget {
               style: Theme.of(context).textTheme.labelLarge,
             ),
           ),
-          if (filter.withFilterCampfire())
+          if (state.isCampfireFiltered())
             OutlinedButton(
-              onPressed: () => filter.toggleCampfire(),
+              onPressed: () => state.toggleCampfire(),
               child: Icon(
                 Icons.water_outlined,
                 color: BrandColors.campingPrimary,
@@ -34,7 +34,7 @@ class Filter extends ConsumerWidget {
             )
           else
             ElevatedButton(
-              onPressed: () => filter.toggleCampfire(),
+              onPressed: () => state.toggleCampfire(),
               child: Icon(
                 Icons.water_outlined,
                 color: BrandColors.white,
@@ -42,9 +42,9 @@ class Filter extends ConsumerWidget {
               ),
             ),
           const SizedBox(width: 16),
-          if (filter.withFilterWater())
+          if (state.isWaterFiltered())
             OutlinedButton(
-              onPressed: () => filter.toggleWater(),
+              onPressed: () => state.toggleWater(),
               child: Icon(
                 Icons.local_fire_department,
                 color: BrandColors.campingPrimary,
@@ -53,7 +53,7 @@ class Filter extends ConsumerWidget {
             )
           else
             ElevatedButton(
-              onPressed: () => filter.toggleWater(),
+              onPressed: () => state.toggleWater(),
               child: Icon(
                 Icons.local_fire_department,
                 color: BrandColors.white,

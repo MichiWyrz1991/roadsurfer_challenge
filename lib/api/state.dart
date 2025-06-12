@@ -1,25 +1,25 @@
 import 'package:roadsurfer_challenge/model/campsite.dart';
 
-class CampsiteData {
+class CampsiteState {
   bool filterCampfire;
   bool filterWater;
   int bottomBarIndex;
   Campsite? selectedCampsite;
 
-  CampsiteData({
+  CampsiteState({
     this.filterCampfire = false,
     this.filterWater = false,
     this.bottomBarIndex = 0,
     this.selectedCampsite,
   });
 
-  CampsiteData copyWith({
+  CampsiteState copyWith({
     bool? filterCampfire,
     bool? filterWater,
     int? bottomBarIndex,
     Campsite? selected,
   }) {
-    return CampsiteData(
+    return CampsiteState(
       filterCampfire: filterCampfire ?? this.filterCampfire,
       filterWater: filterWater ?? this.filterWater,
       bottomBarIndex: bottomBarIndex ?? this.bottomBarIndex,

@@ -1,15 +1,15 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:roadsurfer_challenge/api/data.dart';
+import 'package:roadsurfer_challenge/api/state.dart';
 import 'package:roadsurfer_challenge/model/campsite.dart';
 
-class CampsiteNotifier extends StateNotifier<CampsiteData> {
-  CampsiteNotifier() : super(CampsiteData());
+class CampsiteStateNotifier extends StateNotifier<CampsiteState> {
+  CampsiteStateNotifier() : super(CampsiteState());
 
-  bool withFilterCampfire() {
+  bool isCampfireFiltered() {
     return state.filterCampfire;
   }
 
-  bool withFilterWater() {
+  bool isWaterFiltered() {
     return state.filterWater;
   }
 

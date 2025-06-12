@@ -10,7 +10,7 @@ class BottomBar extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final loc = AppLocalizations.of(context)!;
-    final data = ref.read(campsiteDataProvider.notifier);
+    final state = ref.read(campsiteStateProvider.notifier);
 
     return BottomNavigationBar(
       showSelectedLabels: true,
@@ -28,8 +28,8 @@ class BottomBar extends ConsumerWidget {
           label: loc.bottom_bar_map,
         ),
       ],
-      currentIndex: data.getBottomBarIndex(),
-      onTap: (i) => data.updateBottomBarIndex(i),
+      currentIndex: state.getBottomBarIndex(),
+      onTap: (i) => state.updateBottomBarIndex(i),
     );
   }
 }

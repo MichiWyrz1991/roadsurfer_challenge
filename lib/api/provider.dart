@@ -1,9 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roadsurfer_challenge/api/abstract_api.dart';
 import 'package:roadsurfer_challenge/api/api_impl.dart';
-import 'package:roadsurfer_challenge/api/data.dart';
 import 'package:roadsurfer_challenge/api/notifier.dart';
 import 'package:roadsurfer_challenge/api/repository.dart';
+import 'package:roadsurfer_challenge/api/state.dart';
 import 'package:roadsurfer_challenge/model/campsite.dart';
 
 final campsiteApiProvider = Provider<CampsiteApi>((ref) {
@@ -18,14 +18,14 @@ final campsitesProvider = FutureProvider<List<Campsite>>((ref) async {
   return ref.watch(campsiteRepositoryProvider).getAll();
 });
 
-final campsiteDataProvider =
-    StateNotifierProvider<CampsiteNotifier, CampsiteData>(
-      (ref) => CampsiteNotifier(),
+final campsiteStateProvider =
+    StateNotifierProvider<CampsiteStateNotifier, CampsiteState>(
+      (ref) => CampsiteStateNotifier(),
     );
 
-final filteredCampsitesProvider = Provider<AsyncValue<List<Campsite>>>((ref) {
+final campsiteFilteredProvider = Provider<AsyncValue<List<Campsite>>>((ref) {
   final asyncCampsites = ref.watch(campsitesProvider);
-  final filter = ref.watch(campsiteDataProvider);
+  final filter = ref.watch(campsiteStateProvider);
 
   return asyncCampsites.whenData((campsites) {
     return campsites.where((campsite) {

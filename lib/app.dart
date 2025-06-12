@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Roadsurfer Challenge',
       theme: roadsurferTheme,
       locale: Locale('en'),

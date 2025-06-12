@@ -8,9 +8,9 @@ class EndDrawer extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final data = ref.read(campsiteDataProvider.notifier);
+    final state = ref.read(campsiteStateProvider.notifier);
 
-    final campsite = data.getSelectedCampsite();
+    final campsite = state.getSelectedCampsite();
     if (campsite == null) return Container();
     return SizedBox(
       width: MediaQuery.of(context).size.width / 3,
