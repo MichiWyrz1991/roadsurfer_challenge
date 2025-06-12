@@ -48,5 +48,3 @@ flutter:
   assets:
     - assets/app_icon/
     - assets/countries/
-    - assets/font/
-    - assets/images/
